@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: no
+ # collections:
+ # - fortinet.fortios
+
+
+  roles:
+    - fortir_address
