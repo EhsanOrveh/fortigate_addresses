@@ -1,1 +1,19 @@
+---
+- name: Configure IPv4 addresses.
+  fortios_firewall_address:
+      host:  "{{ fortihost }}"
+      username: "{{ user }}"
+      password: "{{ password }}"
+      vdom:  "root"
+      https: "True"
+      ssl_verify: "false"
+      state: "present"
+      firewall_address:
+        allow_routing: "disable"
+        comment: ""
+        name: "{{ namee }}"
+        subnet: "{{ ip }}"
+        type: "ipmask"
+        state: "present"
+        visibility: "enable"
 
